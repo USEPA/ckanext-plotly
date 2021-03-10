@@ -1,0 +1,20 @@
+{
+  "name": "CKAN-plotly-editor",
+  "version": "0.2.0",
+  "private": true,
+  "dependencies": {
+    "plotly.js": "^1.35.0",
+    "react": "^16.2.0",
+    "react-chart-editor": "latest",
+    "react-dom": "^16.2.0",
+    "react-scripts": "1.0.17",
+    "source-map-explorer": "^2.5.2"
+  },
+  "scripts": {
+    "analyze": "source-map-explorer 'build/static/js/*.js' --html result.html",
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  }
+}

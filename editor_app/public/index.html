@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="theme-color" content="#000000">
+
+    <title>Simple App</title>
+  </head>
+  <body>
+    <noscript>
+      You need to enable JavaScript to run this app.
+    </noscript>
+
+    <textarea id="field-plotly-config" name="plotly_config" cols="40" rows="8" placeholder=""  class="form-control">{"traces":[{"type":"scatter", "xsrc":"_id", "ysrc":"Driven Speed"}]}</textarea>
+
+    <div id="plotly-editor" data-dataURL="http://localhost:5000/datastore/dump/a48e83fc-956d-424e-bce0-ee577c4ef615" data-config-field="field-plotly-config" class="theme--ckan"></div>
+
+    <hr>
+
+    <button id="plotly-load" onclick="window.plotlyEditor.loadConfig('field-plotly-config')">Load</button>
+    <button id="plotly-save" onclick="window.plotlyEditor.exportConfig('field-plotly-config')">Save</button>
+
+  </body>
+</html>

@@ -1,0 +1,8 @@
+{% ckan_extends %}
+
+{% block primary_content_inner %}
+    {% if resource_view.view_type == "plotly_view" %}
+        {% snippet 'plotly/plotly_editor.html', resource_id=resource.id, resource_view=resource_view %}
+    {% endif %}
+    {{super()}}
+{% endblock %}

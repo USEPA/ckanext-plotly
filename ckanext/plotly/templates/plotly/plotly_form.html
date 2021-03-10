@@ -1,0 +1,12 @@
+  <div class="form-group control-full">
+      <label class="control-label" for="field-plotly-config">Plotly Configuration</label>
+      <div class="controls ">
+
+       <textarea id="field-plotly-config" name="plotly_config" cols="20" rows="5" placeholder=""  class="form-control">{{ data.plotly_config | empty_and_escape }}</textarea>
+
+        <button type="button" class="btn btn-primary" style="width: 100%;" data-toggle="modal" href="#plotly-editor-modal" >
+            <i class="fa fa-pencil"></i>Open Graphical Editor
+        </button>
+
+      </div>
+  </div>

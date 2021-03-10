@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+
+
+{% block page %}
+<div class="plotlyEditor">
+  {% asset 'ckanext-plotly/editor-js' %}
+  {% asset 'ckanext-plotly/editor-css' %}
+  <div id='plotly-editor' data-module="plotly_edit" data-dataURL ="{{ full_data_url }}" class="theme--ckan" >
+  </div>
+</div>
+{% endblock %}
+
+{% block custom_styles %}{% endblock %}

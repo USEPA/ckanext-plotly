@@ -1,0 +1,8 @@
+body {
+  background: none;
+}
+
+.js-plotly-plot,
+.plot-container {
+    height: 100vh
+}

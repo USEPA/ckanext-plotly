@@ -1,0 +1,30 @@
+main-css:
+  output: ckanext-plotly/%(version)s_potlyview.css
+  #filters: cssrewrite
+  contents:
+    - plotly_view.css
+
+main-js:
+  output: ckanext-plotly/%(version)s_plotlyview.js
+  extra:
+    preload:
+      - base/main
+  contents:
+    - vendor/plotly/plotly.js
+    - plotly_view.js
+
+
+editor-js:
+  output: ckanext-plotly/%(version)s_plotlyedit.js
+  extra:
+    preload:
+      - base/main
+  contents:
+    - plotly_edit_app.js
+
+editor-css:
+  output: ckanext-plotly/%(version)s_plotlyedit.css
+  #filters: cssrewrite
+  contents:
+    - plotly_edit_app.css
+    - plotly_edit.css

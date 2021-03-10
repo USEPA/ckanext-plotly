@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+
+{% block page %}
+  {% asset 'ckanext-plotly/main-js' %}
+  <div id='plotly_div' data-module="plotly_view" data-module-resource = "{{ resource.id }}"
+       data-module-plotly-config = "{{ plotly_json }}" data-module-dataURL ="{{ data_url }}" >
+  </div>
+
+{% endblock %}
+
+{% block styles %}
+  {{ super() }}
+  {% asset 'ckanext-plotly/main-css' %}
+{% endblock %}
+
+{% block custom_styles %}{% endblock %}

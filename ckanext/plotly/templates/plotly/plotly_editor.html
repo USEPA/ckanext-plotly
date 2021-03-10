@@ -1,0 +1,27 @@
+
+<div id="plotly-editor-modal" class="modal fade" role="dialog" aria-hidden="true" data-backdrop="false" style="background-color: rgba(0, 0, 0, 0.5); text-align: left;">
+    <div class="modal-dialog" role="document" style="width: 95%; height: 95%">
+        <div class="modal-content" >
+
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">&times;</button>
+                <h4 class="modal-title">Plotly Chart Editor</h4>
+            </div>
+
+            <div class="modal-body">
+            <div class="plotlyEditor" >
+              {% asset 'ckanext-plotly/editor-js' %}
+              {% asset 'ckanext-plotly/editor-css' %}
+              <div id='plotly-editor' data-module="plotly_edit" data-dataURL ="{{ h.url_for( 'datastore.dump', resource_id=resource_id) }}" class="theme--ckan">
+              </div>
+            </div>
+            </div>
+
+            <div class="modal-footer">
+                <button id="plotly-load" class="btn btn-default" onclick="window.plotlyEditor.loadConfig('field-plotly-config')">{{ _('Load') }}</button>
+                <button id="plotly-save" class="btn btn-default" data-dismiss="modal" onclick="window.plotlyEditor.exportConfig('field-plotly-config')">{{ _('Save') }}</button>
+            </div>
+
+        </div>
+    </div>
+</div>

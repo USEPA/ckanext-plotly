@@ -1,0 +1,61 @@
+.app {
+  height: calc(100vh);
+  max-height: calc(100vh);
+}
+
+
+.theme--ckan .plotly-editor--theme-provider {
+  /* Global Colors */
+  --color-accent: #206b82;
+  --color-accent-shade-mid: #1b5a6e;
+  --color-accent-shade: #164959;;
+  --color-brand: #1b5a6e;
+
+  /* Background Colors */
+  --color-background-base: #eee;
+  --color-background-light: #f6f6f6;
+  --color-background-medium: #647A82;
+  --color-background-dark: #333;
+  --color-background-top: #ffffff;
+  --color-background-inputs: #ffffff;
+
+  /* Primary Button:fills */
+  --color-button-primary-base-fill: #206b82;
+  --color-button-primary-hover-fill: #164959;
+  --color-button-primary-active-fill: #164959;
+  /* Primary Button:border */
+  --color-button-primary-base-border: #1b5a6e;
+  --color-button-primary-hover-border: #0f323c;
+  --color-button-primary-active-border:  #0f323c;
+
+  /* Border Colors */
+  --color-border-default: #333333;
+  --color-border-light: hsl(213, 25%, 26%);
+  --color-border-dark: hsl(213, 25%, 20%);
+
+  /* Typographical Styles */
+  /*--font-family-body: 'Noto Sans', sans-serif; */
+  /*--font-family-headings: 'Roboto Mono', sans-serif; */
+  /*--font-size-base: 14px;
+  --font-size-heading-base: 20px;
+  --font-letter-spacing-headings: 0px;*/
+  --color-text-base: #000000;
+  --color-text-dark: #000000;
+  --color-text-light: #647A82;
+  --color-text-placeholder: #647A82;
+ /* --color-text-active: var(--color-white);
+  --color-text-header: hsl(205, 100%, 65%);*/
+
+
+  /* Fold Component Styles */
+  --fold-header-text-color-base: var(--color-white);
+  --fold-header-text-color-closed: var(--color-white);
+  --fold-header-background-closed: var(--color-accent-shade);
+  --fold-header-background-base: var(--color-accent);
+  --fold-header-border-color-base: var(--color-border-default);
+  --fold-header-border-color-closed: var(--color-border-default);
+
+  /* Effects */
+  /*--box-shadow-base-color: hsla(216, 32%, 15%, 0.5);
+  --text-shadow-dark-ui-inactive: 0; */
+}
