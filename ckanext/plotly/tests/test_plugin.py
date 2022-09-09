@@ -49,5 +49,27 @@ To temporary patch the CKAN configuration for the duration of a test you can use
 """
 import ckanext.plotly.plugin as plugin
 
-def test_plugin():
-    pass
+import pytest
+from ckan.common import config
+
+from ckan.plugins.toolkit import get_validator, Invalid
+from ckan import plugins
+
+
+class TestPlotly(object):
+
+    def test_plotly_validator_bad_traces(self):
+        v = get_validator("valid_plotly_json")
+        with pytest.raises(Invalid):
+            v('{"traces":{}}')
+
+    def test_plotly_validator_bad_layout(self):
+        v = get_validator("valid_plotly_json")
+        with pytest.raises(Invalid):
+            v('{"layout":[]}')
+
+    def test_plotly_validator_passes(self):
+        v = get_validator("valid_plotly_json")
+        good_config = '{"traces":[],"layout":{}}'
+        assert v(good_config) == good_config
+
